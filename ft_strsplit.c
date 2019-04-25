@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strsplit.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bshara <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: bshara <bshara@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/04/12 18:14:57 by bshara            #+#    #+#             */
-/*   Updated: 2019/04/12 18:14:58 by bshara           ###   ########.fr       */
+/*   Created: 2019/04/25 17:55:00 by bshara            #+#    #+#             */
+/*   Updated: 2019/04/25 17:55:43 by bshara           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,8 +80,6 @@ char		**ft_strsplit(char const *s, char c)
 	{
 		while ((*s == c) && (*s != '\0'))
 			s++;
-		if (!(ret[i] = malloc(sizeof(char) * (c_len(s, c) + 1))))
-			return (NULL);
 		if (!(ret[i] = ft_strsub(s, 0, c_len(s, c))))
 			return (ft_deltab(ret, i));
 		s += c_len(s, c);

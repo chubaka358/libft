@@ -6,11 +6,16 @@
 /*   By: bshara <bshara@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/23 16:05:50 by bshara            #+#    #+#             */
-/*   Updated: 2019/04/23 17:04:44 by bshara           ###   ########.fr       */
+/*   Updated: 2019/04/25 18:12:15 by bshara           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+void	free_list(t_list *lst)
+{
+	
+}
 
 t_list	*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem))
 {
@@ -20,10 +25,7 @@ t_list	*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem))
 	if (lst == NULL || f == NULL)
 		return (NULL);
 	if (!(tmp = f(lst)))
-	{
-		free(tmp);
 		return (NULL);
-	}
 	ret = tmp;
 	lst = lst->next;
 	while (lst != NULL)
