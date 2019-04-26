@@ -12,14 +12,10 @@
 
 #include "libft.h"
 
-void	free_list(t_list *lst)
-{
-	
-}
-
 t_list	*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem))
 {
 	t_list	*ret;
+	t_list	*del;
 	t_list	*tmp;
 
 	if (lst == NULL || f == NULL)
@@ -32,7 +28,12 @@ t_list	*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem))
 	{
 		if (!(tmp->next = &(*(*f)(lst))))
 		{
-			free(tmp->next);
+			del = ret;
+			while (del != tmp->next)
+			{
+				free(del);
+				del = ret->next;
+			}
 			return (NULL);
 		}
 		lst = lst->next;
