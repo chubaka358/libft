@@ -6,7 +6,7 @@
 /*   By: bshara <bshara@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/23 16:05:50 by bshara            #+#    #+#             */
-/*   Updated: 2019/04/25 18:12:15 by bshara           ###   ########.fr       */
+/*   Updated: 2019/04/27 12:56:30 by bshara           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,7 @@ t_list	*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem))
 	t_list	*del;
 	t_list	*tmp;
 
-	if (lst == NULL || f == NULL)
-		return (NULL);
-	if (!(tmp = f(lst)))
+	if (lst == NULL || f == NULL || (!(tmp = f(lst))))
 		return (NULL);
 	ret = tmp;
 	lst = lst->next;
