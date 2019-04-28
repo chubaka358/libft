@@ -19,12 +19,12 @@ FUNC = ft_memset.c ft_strncmp.c ft_strncat.c ft_isdigit.c \
 
 FUNC_O = $(FUNC:.c=.o)
 
-FLAGS = -Wall -Wextra -Werror
+FLAGS = -Wall -Wextra -Werror -c
 
 all: $(NAME)
 
 $(NAME):
-	@gcc $(FLAGS) -c $(FUNC)
+	@gcc $(FLAGS) $(FUNC)
 	@ar rc $(NAME) $(FUNC_O)
 
 clean:
