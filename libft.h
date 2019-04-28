@@ -88,7 +88,7 @@ void				ft_lstadd(t_list **alst, t_list *new);
 void				ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 int					ft_isascending(int *arr, int len);
-int					ft_isascending(int *arr, int len);
+int					ft_issimple(unsigned int a);
 int					ft_lstfold(int *lst, int len);
 char				*ft_replace(char *str, char orig, char to);
 int					ft_square(int a);
