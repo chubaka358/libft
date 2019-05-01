@@ -6,7 +6,7 @@
 /*   By: bshara <bshara@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/04 19:16:57 by bshara            #+#    #+#             */
-/*   Updated: 2019/04/25 15:15:36 by bshara           ###   ########.fr       */
+/*   Updated: 2019/04/28 19:48:40 by bshara           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -92,5 +92,7 @@ int					ft_issimple(unsigned int a);
 int					ft_lstfold(int *lst, int len);
 char				*ft_replace(char *str, char orig, char to);
 int					ft_square(int a);
+char				*ft_copyuntil(char *s, char c);
+int					ft_lenuntil(char *s, char c);
 
 #endif
