@@ -15,7 +15,8 @@ FUNC = ft_memset.c ft_strncmp.c ft_strncat.c ft_isdigit.c \
 		ft_strsub.c ft_strjoin.c ft_strtrim.c ft_strsplit.c \
 		ft_itoa.c ft_lstnew.c ft_lstdelone.c ft_lstdel.c \
 		ft_lstadd.c ft_lstiter.c ft_lstmap.c ft_isascending.c \
-		ft_issimple.c ft_lstfold.c ft_replace.c ft_square.c
+		ft_issimple.c ft_lstfold.c ft_replace.c ft_square.c \
+		ft_cpyuntil.c ft_lenuntil.c
 
 FUNC_O = $(FUNC:.c=.o)
 
