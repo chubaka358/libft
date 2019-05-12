@@ -3,22 +3,26 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bshara <bshara@student.42.fr>              +#+  +:+       +#+        */
+/*   By: chubaka358 <chubaka358@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/04 19:16:57 by bshara            #+#    #+#             */
-/*   Updated: 2019/05/07 16:25:42 by bshara           ###   ########.fr       */
+/*   Updated: 2019/05/11 14:03:02 by chubaka358       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 
 # define LIBFT_H
+# define BUFF_SIZE 1024
 # define MAX_SIZE 18446744073709551615ULL
 
 # include <unistd.h>
 # include <string.h>
 # include <stdlib.h>
 # include <errno.h>
+# include <sys/types.h>
+# include <sys/uio.h>
+# include <unistd.h>
 
 typedef struct		s_list
 {
@@ -94,5 +98,6 @@ char				*ft_replace(char *str, char orig, char to);
 int					ft_square(int a);
 ssize_t				ft_lenuntil(char *s, char c);
 char				*ft_cpyuntil(char *s, char c);
+int					get_next_line(const int fd, char **line);
 
 #endif
